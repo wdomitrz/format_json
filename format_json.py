@@ -10,7 +10,9 @@ import argparse
 import json
 import sys
 from dataclasses import dataclass
-from typing import NamedTuple, Self, TypeAlias, cast
+from typing import NamedTuple, TypeAlias, cast
+
+from typing_extensions import Self
 
 JSONScalar: TypeAlias = None | bool | int | float | str
 JSON: TypeAlias = JSONScalar | list["JSON"] | dict[str, "JSON"]
