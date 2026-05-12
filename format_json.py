@@ -22,7 +22,7 @@ from typing import NamedTuple, TypeAlias, cast
 if sys.version_info >= (3, 11):
     from typing import Self  # pyright: ignore[reportUnreachable]
 else:
-    from typing_extensions import Self  # pyright: ignore[reportMissingModuleSource]
+    from typing_extensions import Self
 
 JSONScalar: TypeAlias = None | bool | int | float | str
 JSON: TypeAlias = JSONScalar | list["JSON"] | dict[str, "JSON"]
