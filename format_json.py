@@ -3,13 +3,6 @@
 # Copyright (c) 2025 Witalis Domitrz <witekdomitrz@gmail.com>
 # AGPL License
 ################################################################
-#
-# /// script
-# requires-python = ">=3.10"
-# dependencies = [
-#   "typing-extensions>=4.1; python_version < '3.11'",
-# ]
-# ///
 
 from __future__ import annotations
 
@@ -19,10 +12,7 @@ import sys
 from dataclasses import dataclass
 from typing import NamedTuple, TypeAlias, cast
 
-if sys.version_info >= (3, 11):
-    from typing import Self  # pyright: ignore[reportUnreachable]
-else:
-    from typing_extensions import Self
+from typing_extensions import Self
 
 JSONScalar: TypeAlias = None | bool | int | float | str
 JSON: TypeAlias = JSONScalar | list["JSON"] | dict[str, "JSON"]
